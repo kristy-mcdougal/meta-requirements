@@ -1,0 +1,242 @@
+[
+  {
+    "sortOrder": 1,
+    "category": "Ingestion and structure",
+    "title": "Ingest and atomize source documents",
+    "body": "Ingest source documents (Google Docs preferred, and direct upload also supported) and atomize them into reusable components."
+  },
+  {
+    "sortOrder": 2,
+    "category": "Ingestion and structure",
+    "title": "Direct upload and custom integrations",
+    "body": "Support other sources through direct upload, with custom integrations to be scoped as needed (for example, Hive tables via API)."
+  },
+  {
+    "sortOrder": 3,
+    "category": "Ingestion and structure",
+    "title": "Meta document types and slide atomization",
+    "body": "Support Meta's document types (CMDs, rec briefs, MRDs, APDs, staging briefs), including per-slide atomization of decks with metadata where needed."
+  },
+  {
+    "sortOrder": 4,
+    "category": "Ingestion and structure",
+    "title": "Source documents stay the source of truth",
+    "body": "Source docs remain the source of truth; scale target is hundreds of documents, kept lean."
+  },
+  {
+    "sortOrder": 5,
+    "category": "Ingestion and structure",
+    "title": "Google Drive sync",
+    "body": "Sync from Google Drive centralized folders using a configurable schedule, manual sync on demand, or a change notification from Google Drive, with the change notification preferred by Meta."
+  },
+  {
+    "sortOrder": 6,
+    "category": "Ingestion and structure",
+    "title": "Detect content-level changes",
+    "body": "On each sync, detect content-level changes (not just timestamps) and update only the affected atoms."
+  },
+  {
+    "sortOrder": 7,
+    "category": "Ingestion and structure",
+    "title": "Onboard new templates with calibration",
+    "body": "Support onboarding of new document templates and types, with a human-guided calibration pass."
+  },
+  {
+    "sortOrder": 8,
+    "category": "Ingestion and structure",
+    "title": "Tune extraction inside the knowledge base",
+    "body": "Tune ingestion behavior (extraction and atomization) directly within the knowledge base, including editable extraction prompts and taxonomy guidelines with versioning."
+  },
+  {
+    "sortOrder": 9,
+    "category": "Ingestion and structure",
+    "title": "Exact quotes and proof points",
+    "body": "Quoted content and proof points must be an exact 1:1 match, including punctuation, because they are legally approved and in some cases contractually required."
+  },
+  {
+    "sortOrder": 10,
+    "category": "Ingestion and structure",
+    "title": "Consistent atomization, no synthesis",
+    "body": "Atomization output must be consistent and complete, with no drift and no synthesis."
+  },
+  {
+    "sortOrder": 11,
+    "category": "Re-ingestion",
+    "title": "Unchanged source produces the same atoms",
+    "body": "Unchanged source, no edits: re-running ingestion produces the same atoms, with no duplicates and no new versions."
+  },
+  {
+    "sortOrder": 12,
+    "category": "Re-ingestion",
+    "title": "Content edits survive re-ingestion",
+    "body": "Unchanged source, atoms edited by a content person: edits are preserved and not overwritten by a re-run."
+  },
+  {
+    "sortOrder": 13,
+    "category": "Re-ingestion",
+    "title": "Changed source updates only affected atoms",
+    "body": "Changed source: content hashes at the document and atom level identify exactly which atoms changed, and only those are updated. Each update arrives as a new draft version with a side-by-side diff, and a content person reviews it before it is published."
+  },
+  {
+    "sortOrder": 14,
+    "category": "Re-ingestion",
+    "title": "Flag true duplicates, not lookalikes",
+    "body": "Duplicate handling: flag when the same document is loaded twice, but treat similar documents written for different audiences as separate. IDs intentionally reused across documents (such as guidance IDs) must not trigger false matches."
+  },
+  {
+    "sortOrder": 15,
+    "category": "Tagging and taxonomy",
+    "title": "Auto-tag with review and override",
+    "body": "Auto-tag atoms during ingestion, with the ability to review and override."
+  },
+  {
+    "sortOrder": 16,
+    "category": "Tagging and taxonomy",
+    "title": "Tag only predefined taxonomies",
+    "body": "Tag only against predefined taxonomies, never invented tags."
+  },
+  {
+    "sortOrder": 17,
+    "category": "Tagging and taxonomy",
+    "title": "Semaphore is the taxonomy source of truth",
+    "body": "Use a shared taxonomy as the source of truth (a few hundred tags), kept in Meta's existing taxonomy tool (Semaphore) and synced to Hygraph. Example coverage includes Meta audience segments (SBG, in-market, mid-market), sensitivity labels (Internal, External, and 1:1 NDA), and DSS classifications."
+  },
+  {
+    "sortOrder": 18,
+    "category": "Tagging and taxonomy",
+    "title": "Product name changes cascade",
+    "body": "Product name changes (which can happen overnight) must cascade to all tagged atoms, with separate internal and external product names supported."
+  },
+  {
+    "sortOrder": 19,
+    "category": "Governance and trust",
+    "title": "Trace every atom back to the source",
+    "body": "Full traceability from atom to atomized document to original source, with side-by-side verification."
+  },
+  {
+    "sortOrder": 20,
+    "category": "Governance and trust",
+    "title": "Legal and brand approval workflows",
+    "body": "Approval workflows for legal and brand review, with role-based permissions, notifications, and a status view."
+  },
+  {
+    "sortOrder": 21,
+    "category": "Governance and trust",
+    "title": "Versioning with a diff view",
+    "body": "Versioning with a diff view when source documents change."
+  },
+  {
+    "sortOrder": 22,
+    "category": "Governance and trust",
+    "title": "Internal content stays internal",
+    "body": "Internal-only content must never surface in external-facing outputs."
+  },
+  {
+    "sortOrder": 23,
+    "category": "Governance and trust",
+    "title": "Cited, approved outputs",
+    "body": "Every atom cited and traceable, with outputs that are brand and legal approved."
+  },
+  {
+    "sortOrder": 24,
+    "category": "Delivery",
+    "title": "Governed payloads by API and MCP",
+    "body": "Deliver governed payloads via API and MCP (read and write, with documented rate limits) to Meta's own tools (Campaign Studio and the internal sales AI assistant). Meta owns the front ends."
+  },
+  {
+    "sortOrder": 25,
+    "category": "Delivery",
+    "title": "Hygraph owns search and vectorization",
+    "body": "Hygraph owns vectorization and semantic search, providing low-latency, high-accuracy retrieval."
+  },
+  {
+    "sortOrder": 26,
+    "category": "Delivery",
+    "title": "Multi-asset support, DAM-agnostic",
+    "body": "Multi-asset support (images, GIFs, large video files), DAM-agnostic."
+  },
+  {
+    "sortOrder": 27,
+    "category": "Sales enablement DAM",
+    "title": "Home for official sales decks",
+    "body": "Serve as the home for official sales decks, replacing Highspot."
+  },
+  {
+    "sortOrder": 28,
+    "category": "Sales enablement DAM",
+    "title": "Keep sales decks intact",
+    "body": "Keep decks intact in a dedicated folder rather than atomizing them. The source documents behind them are atomized instead, and sales never sees those."
+  },
+  {
+    "sortOrder": 29,
+    "category": "Sales enablement DAM",
+    "title": "Marketers upload, sales pulls",
+    "body": "Marketers upload only; sales pulls only."
+  },
+  {
+    "sortOrder": 30,
+    "category": "Sales enablement DAM",
+    "title": "View-only access to the sales folder",
+    "body": "Role-based, view-only access scoped to the sales folder (internal, external, and 1:1 NDA tagging), with no separate front end to build."
+  },
+  {
+    "sortOrder": 31,
+    "category": "Sales enablement DAM",
+    "title": "Search, find, and download",
+    "body": "Simple search, find, and download. Sales edits a copy rather than the official version."
+  },
+  {
+    "sortOrder": 32,
+    "category": "Sales enablement DAM",
+    "title": "Tags and descriptions on every asset",
+    "body": "Tag with Meta's taxonomy and include description fields so assets are understandable without opening them."
+  },
+  {
+    "sortOrder": 33,
+    "category": "Sales enablement DAM",
+    "title": "Search slides and video by meaning",
+    "body": "Support Google Slides, PowerPoint, and video files (such as .mov keynote clips) searchable by meaning. Images are lower priority and logos are not stored for this use case."
+  },
+  {
+    "sortOrder": 34,
+    "category": "Measurement",
+    "title": "Citation and helpfulness stats",
+    "body": "Citation and helpfulness stats per atom, with the ability to export to Meta's data lake and analytics tools."
+  },
+  {
+    "sortOrder": 35,
+    "category": "Measurement",
+    "title": "Atom-level view rate",
+    "body": "Atom-level performance metrics (percentage view rate) using data sourced from Meta systems."
+  },
+  {
+    "sortOrder": 36,
+    "category": "Platform and operations",
+    "title": "Meta-branded knowledge base",
+    "body": "Meta-branded, white-labeled knowledge base UI."
+  },
+  {
+    "sortOrder": 37,
+    "category": "Platform and operations",
+    "title": "AI security and confidentiality",
+    "body": "Strong AI security and data confidentiality."
+  },
+  {
+    "sortOrder": 38,
+    "category": "Platform and operations",
+    "title": "Authentication including SCIM",
+    "body": "Authentication options including SCIM (to be delivered)."
+  },
+  {
+    "sortOrder": 39,
+    "category": "Platform and operations",
+    "title": "Hygraph carries the build",
+    "body": "No Meta engineering effort to build and maintain. Hygraph's forward-deployed engineers, product managers, and designers carry the project, with a fast path for fixing issues when something goes wrong."
+  },
+  {
+    "sortOrder": 40,
+    "category": "Platform and operations",
+    "title": "Rapid-response support",
+    "body": "Rapid-response support and the ability to adapt quickly to changes in direction."
+  }
+]
